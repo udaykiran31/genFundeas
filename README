@@ -1,0 +1,4 @@
+Uday-Kirans-MacBook-Pro:genFundeas uday$ touch README
+Uday-Kirans-MacBook-Pro:genFundeas uday$ git add README
+Uday-Kirans-MacBook-Pro:genFundeas uday$ git commit -m 'first commit'
+Uday-Kirans-MacBook-Pro:genFundeas uday$ git push -u origin master
