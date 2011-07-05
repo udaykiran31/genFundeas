@@ -30,7 +30,6 @@ def main():
         dict_stdDev[i]=list_stdDev
     for key in dict_stdDev.keys():
         mean_ofStdDev = getMean(dict_stdDev[key])
-        mean_ofStdDev=float(mean_ofStdDev)
         dict_stdDev[key]=getMod(mean_ofStdDev,population_stdDev)
     print dict_stdDev    
         
@@ -41,7 +40,7 @@ def getMean(list_sample):
     sum1 =0
     for i in list_sample:
         sum1 = sum1 + i
-    return Decimal(sum1)/Decimal(len(list_sample))
+    return Decimal(str(sum1))/Decimal(len(list_sample))
 def getStdDevNum(list_sample,mean):
     diff=0
     for i in list_sample:
@@ -54,7 +53,7 @@ def getStdDev(num,sample_size):
     var = Decimal(num)/Decimal(sample_size)    
     return sqrt(var)
 def getMod(var1,var2):
-    var = var1-var2
+    var = var1-Decimal(str(var2))
     if var>=0:
         return var
     else: return var*-1
